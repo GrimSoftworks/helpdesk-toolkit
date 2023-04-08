@@ -67,18 +67,43 @@ function main {
                 sudo bash file_management/first-script.sh
                 ;;
             "two")
+                echo "Loading option two..."
+                for i {1..10;} do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"
                 sudo bash file_management/second-script.sh
                 ;;
             "three")
+                echo "Loading option three..."
+                for i {1..10;} do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"
                 sudo bash file_management/third-script.sh
                 ;;
             "four")
+                echo "Loading option four..."
+                for i {1..10;} do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"                
                 sudo bash network_management/fourth-script.sh
                 ;;
             "five")
+                echo "Loading option five..."
+                for i {1..10;} do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"
                 sudo bash network_management/fifth-script.sh
                 ;;
             "six")
+                echo "Loading option six..."
+                for i {1..10;} do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"
                 sudo bash network_management/sixth-script.sh
                 ;;
             "Quit")
