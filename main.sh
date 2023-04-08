@@ -66,7 +66,7 @@ function main {
                         sleep 0.2
                         echo "$((i*10))"
                     done
-                ) | whiptail --gauge "Please wait while option one is loaded..." 6 60 0
+                ) | whiptail --gauge "Please wait while option one is loaded..." 6 25 45 60 0
                 sudo bash file_management/first-script.sh
                 ;;
             "two")
