@@ -58,52 +58,80 @@ function main {
         case $option in
             "one")
                 echo "Loading option one..."
-                for i in {1..10}; do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"
-                done
-                echo ""
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option one..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option one is loaded..." 6 60 0
                 sudo bash file_management/first-script.sh
                 ;;
             "two")
                 echo "Loading option two..."
-                for i {1..10;} do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option two..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option two is loaded..." 6 60 0
                 sudo bash file_management/second-script.sh
                 ;;
             "three")
                 echo "Loading option three..."
-                for i {1..10;} do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option three..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option three is loaded..." 6 60 0
                 sudo bash file_management/third-script.sh
                 ;;
             "four")
                 echo "Loading option four..."
-                for i {1..10;} do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"                
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option four..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option four is loaded..." 6 60 0
                 sudo bash network_management/fourth-script.sh
                 ;;
             "five")
                 echo "Loading option five..."
-                for i {1..10;} do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option five..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option five is loaded..." 6 60 0
                 sudo bash network_management/fifth-script.sh
                 ;;
             "six")
                 echo "Loading option six..."
-                for i {1..10;} do
-                    echo -ne "\r"
-                    sleep 0.1
-                    echo -ne "Loading...[$i/10]"
+                sleep 1
+                (
+                    echo "10"
+                    echo "# Loading option six..."
+                    for i in {1..10}; do
+                        sleep 0.2
+                        echo "$((i*10))"
+                    done
+                ) | whiptail --gauge "Please wait while option six is loaded..." 6 60 0
                 sudo bash network_management/sixth-script.sh
                 ;;
             "Quit")
@@ -115,6 +143,7 @@ function main {
         esac
     done
 }
+
 
 # Start the Helpdesk Toolkit
 banner
