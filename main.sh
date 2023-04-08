@@ -1,12 +1,42 @@
 #!/bin/bash
 
+
 # Check if script is being run with sudo
 if [ "$EUID" -ne 0 ]
-  then echo "This script requires sudo to function."
-  exit
+then 
+    # Banner for being a dingus and not using sudo
+    echo -e "\e[31m"
+    cat << "EOF"
+
+             ________________________________________________
+            /                                                \
+           |    _________________________________________     |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |          Error: Run with sudo           |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |_________________________________________|    |
+           |                                                  |
+            \_________________________________________________/
+                   \___________________________________/
+
+EOF
+    echo -e "\e[0m"
+    
+    echo -e "\e[31mThis script requires sudo to function.\e[0m"
+    exit
 fi
 
-# Banner
+# Banner for Helpdesk Toolkit
 function banner {
     echo -e "\e[1m\e[32m"
     cat << "EOF"
