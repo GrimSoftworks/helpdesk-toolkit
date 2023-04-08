@@ -56,7 +56,7 @@ function main {
 
     select option in "${options[@]}"; do
         case $option in
-            "one")
+            "User Management")
                 echo "Loading User Management Module..."
                 sleep 1
                 (
