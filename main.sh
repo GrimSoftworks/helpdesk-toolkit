@@ -57,6 +57,13 @@ function main {
     select option in "${options[@]}"; do
         case $option in
             "one")
+                echo "Loading option one..."
+                for i in {1..10}; do
+                    echo -ne "\r"
+                    sleep 0.1
+                    echo -ne "Loading...[$i/10]"
+                done
+                echo ""
                 sudo bash file_management/first-script.sh
                 ;;
             "two")
