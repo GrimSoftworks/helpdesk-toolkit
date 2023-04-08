@@ -52,22 +52,22 @@ function main {
 
     # Prompt the user for which action to perform
     PS3="Please select an action (1-7): "
-    options=("one" "two" "three" "four" "five" "six" "Quit")
+    options=("User Management" "two" "three" "four" "five" "six" "Quit")
 
     select option in "${options[@]}"; do
         case $option in
             "one")
-                echo "Loading option one..."
+                echo "Loading User Management Module..."
                 sleep 1
                 (
                     echo "10"
-                    echo "# Loading option one..."
+                    echo "# Loading User Management Module..."
                     for i in {1..10}; do
                         sleep 0.2
                         echo "$((i*10))"
                     done
-                ) | whiptail --gauge "Please wait while option one is loaded..." 6 60 0
-                sudo bash file_management/first-script.sh
+                ) | whiptail --gauge "Please wait while User Management is loaded..." 6 60 0
+                sudo bash ./modules/user-management.sh
                 ;;
             "two")
                 echo "Loading option two..."
